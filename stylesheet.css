@@ -29,3 +29,10 @@ body{
     /* text-align: left; */
     /* background:#AAAAFF */
 }
+
+.image{
+    background-image: url(sources/img/owl.png);
+    /* or you can just use background: url() */
+    background-repeat: no-repeat;
+    background-position: right top;
+}
