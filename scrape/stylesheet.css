@@ -1,0 +1,149 @@
+/* body{
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+    text-decoration: solid;
+    text-wrap:wrap ;
+    background:fixed;
+    background-position: center;
+     background-color:#AAAAFF; 
+    font-size:xx-large;
+}
+
+#profile{
+    height:55%;
+    width:110%;
+    position:relative;
+}
+
+.grid-container{
+    display:grid;
+    column-gap:50px;
+    grid-template-columns: auto auto;
+     grid-template-rows: auto auto auto auto auto; 
+    padding: 10px;
+}
+
+.grid-item{
+    padding: 20px;
+     text-align: left; 
+    background:#AAAAFF 
+}
+
+.image{
+    background-image: url(sources/img/owl.png);
+     or you can just use background: url() 
+    background-repeat: no-repeat;
+    background-position: right top;
+} */
+
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    color: #4caf50; /* Cybersecurity Green */
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.project {
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+}

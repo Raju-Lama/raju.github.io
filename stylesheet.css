@@ -1,149 +1,250 @@
-/* body{
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align:justify;
-    text-decoration: solid;
-    text-wrap:wrap ;
-    background:fixed;
-    background-position: center;
-     background-color:#AAAAFF; 
-    font-size:xx-large;
-}
-
-#profile{
-    height:55%;
-    width:110%;
-    position:relative;
-}
-
-.grid-container{
-    display:grid;
-    column-gap:50px;
-    grid-template-columns: auto auto;
-     grid-template-rows: auto auto auto auto auto; 
-    padding: 10px;
-}
-
-.grid-item{
-    padding: 20px;
-     text-align: left; 
-    background:#AAAAFF 
-}
-
-.image{
-    background-image: url(sources/img/owl.png);
-     or you can just use background: url() 
-    background-repeat: no-repeat;
-    background-position: right top;
-} */
-
-
-/* Resetting default browser styles */
+/* styles.css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #1a1a1a;
+    --dark-color: #0d0d0d;
+    --text-color: #ffffff;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #f5f5f5;
-}
-
-h1, h2, h3 {
-    color: #4caf50; /* Cybersecurity Green */
-}
-
-a {
-    color: #4caf50;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    border-bottom: 2px solid #333;
-}
-
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-section {
-    padding: 50px 0;
-}
-
-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1.1em;
+    background-color: var(--dark-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-ul {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: rgba(13, 13, 13, 0.95);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
     list-style: none;
-    padding-left: 0;
 }
 
-ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.project {
-    background-color: #222;
-    border: 1px solid #333;
-    padding: 20px;
-    margin: 15px 0;
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
-footer {
-    background-color: #1a1a1a;
-    padding: 20px 0;
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.btn-line {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-image {
+    flex: 1;
     text-align: center;
-    border-top: 2px solid #333;
 }
 
-footer p {
-    font-size: 1em;
+.hero-image img {
+    max-width: 100%;
+    height: auto;
 }
 
+/* Projects Section */
+.projects {
+    padding: 5rem 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog Section */
+.blog {
+    padding: 5rem 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.blog-post {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 1rem;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .menu-btn {
+        display: block;
     }
 
-    section {
-        padding: 30px 0;
+    .hero {
+        padding-top: 12rem;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 }
